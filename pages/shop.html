@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>廢材商店｜廢材機器人 Junkbot</title>
+<meta name="description" content="廢材機器人精選 DIY 材料包、改造工具與周邊商品。">
+<link rel="icon" href="../assets/img/logo.png">
+<link rel="stylesheet" href="../assets/css/styles.css?v=202606171606">
+</head>
+<body class="dotgrid" data-base="../" data-page="shop">
+
+<div id="site-header"></div>
+
+<section class="page-banner">
+  <div class="wrap">
+    <h1>廢材商店</h1>
+    <div class="en">SHOP</div>
+    <div class="crumbs"><a href="../index.html">首頁</a> ／ 廢材商店</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="lead" style="text-align:center;margin-bottom:34px">精選材料包與工具，把創意帶回家，在家也能輕鬆改造 🛠️</p>
+    <div class="grid-3" id="shopGrid">
+      <article class="tile reveal"><div class="tile__media"><img src="../assets/img/mascot-bengbeng.png" alt="紙箱機器人材料包"></div><div class="tile__body"><span class="tile__tag">材料包</span><h3>紙箱機器人 DIY 包</h3><p>含紙箱、齒輪、磁鐵與圖解說明書。</p><div class="tile__foot"><span class="price">NT$ 380</span><button class="btn btn--yellow btn--sm add-cart">加入購物車</button></div></div></article>
+      <article class="tile reveal"><div class="tile__media"><img src="../assets/img/mascot-tiaotiao.png" alt="寶特瓶機器人材料包"></div><div class="tile__body"><span class="tile__tag">材料包</span><h3>寶特瓶機器人 DIY 包</h3><p>回收寶特瓶＋扳手腳零件組合包。</p><div class="tile__foot"><span class="price">NT$ 320</span><button class="btn btn--yellow btn--sm add-cart">加入購物車</button></div></div></article>
+      <article class="tile reveal"><div class="tile__media"><img src="../assets/img/mascot-bengbeng-smile.png" alt="工具組"></div><div class="tile__body"><span class="tile__tag">工具</span><h3>小創客工具組</h3><p>安全剪、熱熔膠、無痕貼，新手必備。</p><div class="tile__foot"><span class="price">NT$ 450</span><button class="btn btn--yellow btn--sm add-cart">加入購物車</button></div></div></article>
+      <article class="tile reveal"><div class="tile__media"><img src="../assets/img/mascot-bengbeng.png" alt="齒輪零件包"></div><div class="tile__body"><span class="tile__tag">零件</span><h3>廢材齒輪零件包</h3><p>各種尺寸回收齒輪，創作自由搭配。</p><div class="tile__foot"><span class="price">NT$ 180</span><button class="btn btn--yellow btn--sm add-cart">加入購物車</button></div></div></article>
+      <article class="tile reveal"><div class="tile__media"><img src="../assets/img/logo.png" alt="貼紙組"></div><div class="tile__body"><span class="tile__tag">周邊</span><h3>Junkbot 角色貼紙組</h3><p>蹦蹦、跳跳防水貼紙一套兩款。</p><div class="tile__foot"><span class="price">NT$ 120</span><button class="btn btn--yellow btn--sm add-cart">加入購物車</button></div></div></article>
+      <article class="tile reveal"><div class="tile__media"><img src="../assets/img/mascot-tiaotiao.png" alt="材料訂閱"></div><div class="tile__body"><span class="tile__tag">訂閱</span><h3>每月廢材驚喜箱</h3><p>每月寄送一箱精選改造材料與題目。</p><div class="tile__foot"><span class="price">NT$ 599</span><button class="btn btn--yellow btn--sm add-cart">加入購物車</button></div></div></article>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/main.js?v=202606171606"></script>
+<script>
+  // 購物車 placeholder（之後接後端 / Apps Script）
+  document.querySelectorAll('.add-cart').forEach(b=>{
+    b.addEventListener('click',e=>{
+      e.preventDefault();
+      const name=b.closest('.tile').querySelector('h3').textContent;
+      b.textContent='已加入 ✓';
+      setTimeout(()=>b.textContent='加入購物車',1200);
+      console.log('加入購物車：'+name);
+    });
+  });
+</script>
+</body>
+</html>

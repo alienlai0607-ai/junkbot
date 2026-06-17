@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聯絡我們｜廢材機器人 Junkbot</title>
+<meta name="description" content="與廢材機器人 Junkbot 聯絡 — 課程、合作、訂購與任何想法都歡迎來信。">
+<link rel="icon" href="../assets/img/logo.png">
+<link rel="stylesheet" href="../assets/css/styles.css?v=202606171606">
+<style>
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; }
+  .form-card,.info-card{
+    background:var(--paper); border:var(--line) solid var(--ink);
+    border-radius:var(--radius); padding:28px 26px; box-shadow:var(--shadow);
+  }
+  .field{ margin-bottom:16px; }
+  .field label{ display:block; font-family:var(--font-round); margin-bottom:6px; }
+  .field input,.field textarea{
+    width:100%; font-family:var(--font-body); font-size:1rem;
+    padding:11px 14px; border:var(--line) solid var(--ink);
+    border-radius:14px; background:var(--cream); color:var(--ink);
+  }
+  .field input:focus,.field textarea:focus{ outline:none; border-color:var(--blue); }
+  .field textarea{ min-height:120px; resize:vertical; }
+  .info-row{ display:flex; gap:14px; align-items:flex-start; margin-bottom:18px; }
+  .info-row .ico{
+    flex:0 0 44px; height:44px; border-radius:50%;
+    background:var(--yellow); border:var(--line) solid var(--ink);
+    display:grid; place-items:center; font-size:1.2rem;
+  }
+  .info-row h4{ font-size:1.05rem; } .info-row p{ font-size:.92rem; color:var(--ink-soft); }
+  .form-note{ font-size:.85rem; color:var(--ink-soft); margin-top:8px; }
+  @media(max-width:760px){ .contact-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body class="dotgrid" data-base="../" data-page="contact">
+
+<div id="site-header"></div>
+
+<section class="page-banner">
+  <div class="wrap">
+    <h1>聯絡我們</h1>
+    <div class="en">CONTACT</div>
+    <div class="crumbs"><a href="../index.html">首頁</a> ／ 聯絡我們</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <!-- 表單 -->
+    <form class="form-card reveal" id="contactForm">
+      <div class="section__head" style="text-align:left;margin-bottom:18px"><div class="en">SAY HELLO</div><h2>跟我們說說話</h2></div>
+      <div class="field"><label>你的名字</label><input type="text" name="name" required placeholder="怎麼稱呼你？"></div>
+      <div class="field"><label>Email</label><input type="email" name="email" required placeholder="example@mail.com"></div>
+      <div class="field"><label>主旨</label><input type="text" name="subject" placeholder="課程詢問 / 合作提案 / 其他"></div>
+      <div class="field"><label>訊息內容</label><textarea name="message" required placeholder="把你的想法告訴我們吧！"></textarea></div>
+      <button type="submit" class="btn btn--red">送出訊息 <span class="ico">➜</span></button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+
+    <!-- 資訊 -->
+    <div class="info-card reveal">
+      <div class="section__head" style="text-align:left;margin-bottom:18px"><div class="en">FIND US</div><h2>聯絡資訊</h2></div>
+      <div class="info-row"><span class="ico">✉️</span><div><h4>Email</h4><p><a href="mailto:junkbot.taiwan@gmail.com">junkbot.taiwan@gmail.com</a></p></div></div>
+      <div class="info-row"><span class="ico">💬</span><div><h4>官方 LINE</h4><p><a href="https://lin.ee/zFqqFzQ" target="_blank" rel="noopener">@183dxhcw（點此加好友）</a></p></div></div>
+      <div class="info-row"><span class="ico">📍</span><div><h4>教室據點</h4><p>台南北區・中華北路二段 113 號<br>台南永康・東橋一路 558 號</p></div></div>
+      <div class="info-row"><span class="ico">👍</span><div><h4>社群</h4><p>追蹤布拉克星球 <a href="https://www.facebook.com/blockplanet" target="_blank" rel="noopener">Facebook</a>、<a href="https://www.instagram.com/blockplanet_2021" target="_blank" rel="noopener">Instagram</a>，看更多廢材改造！</p></div></div>
+      <a class="btn btn--blue btn--sm" href="../index.html">回到首頁 <span class="ico">➜</span></a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/main.js?v=202606171606"></script>
+<script>
+  // 表單 placeholder（之後接 Apps Script / Formspree）
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('formNote').textContent='✅ 已收到你的訊息！（目前為展示模式，串接後端後會真正寄出）';
+    this.reset();
+  });
+</script>
+</body>
+</html>
