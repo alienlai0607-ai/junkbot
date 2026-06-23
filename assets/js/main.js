@@ -22,7 +22,7 @@
     { key: 'rules',   zh: '賽事辦法', en: 'RULES',   href: 'pages/rules.html' },
     { key: 'news',    zh: '最新消息', en: 'NEWS',    href: 'pages/news.html' },
     { key: 'gallery', zh: '賽事相簿', en: 'GALLERY', href: 'pages/gallery.html' },
-    { key: 'shop',    zh: '廢材商店', en: 'SHOP',    href: 'pages/shop.html' },
+    { key: 'rules2',  zh: '賽事規則', en: 'RULES',   href: 'pages/rules.html' },
     { key: 'contact', zh: '聯絡我們', en: 'CONTACT', href: 'pages/contact.html' }
   ];
 

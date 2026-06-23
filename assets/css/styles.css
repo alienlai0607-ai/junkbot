@@ -246,9 +246,10 @@ h1,h2,h3,h4{ font-family:var(--font-round); line-height:1.25; }
     display:block; text-align:center; padding:18px 16px 2px; background:var(--cream);
   }
   .hero-cta-mobile .btn{
-    width:100%; max-width:440px; justify-content:center;
-    font-size:1.02rem; line-height:1.35; padding:14px 18px;
+    width:100%; max-width:440px; justify-content:center; text-align:center;
+    white-space:normal; font-size:1.02rem; line-height:1.35; padding:14px 18px;
   }
+  .hero-cta-mobile .btn .ico{ flex:0 0 auto; }
 }
 
 /* ===================================================================
@@ -915,4 +916,9 @@ h1,h2,h3,h4{ font-family:var(--font-round); line-height:1.25; }
   .award-cols .race-table th:nth-child(1),
   .award-cols .race-table td:nth-child(1){ width:38%; }
   .award-cols .race-table .ev{ white-space:normal; }
+  /* 賽程表：手機不橫滑、不偏出，時程欄固定寬、賽程欄自動換行 */
+  #schedule .table-scroll{ overflow:visible; }
+  #schedule .race-table{ min-width:0; table-layout:fixed; }
+  #schedule .race-table th:nth-child(1),
+  #schedule .race-table td:nth-child(1){ width:36%; }
 }
