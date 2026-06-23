@@ -909,4 +909,10 @@ h1,h2,h3,h4{ font-family:var(--font-round); line-height:1.25; }
   .vs-grid{ grid-template-columns:1fr; }
   .enroll-steps{ grid-template-columns:1fr; }
   .pay-grid{ grid-template-columns:1fr; }
+  /* 獎項表格：手機不橫滑，整表填滿、獎項內容自動換行 */
+  .award-cols .table-scroll{ overflow:visible; }
+  .award-cols .race-table{ min-width:0; table-layout:fixed; }
+  .award-cols .race-table th:nth-child(1),
+  .award-cols .race-table td:nth-child(1){ width:38%; }
+  .award-cols .race-table .ev{ white-space:normal; }
 }
