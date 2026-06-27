@@ -243,13 +243,9 @@ h1,h2,h3,h4{ font-family:var(--font-round); line-height:1.25; }
 @media (max-width:900px){
   .hero-fly{ display:none; }
   .hero-cta-mobile{
-    display:block; text-align:center; padding:18px 16px 2px; background:var(--cream);
+    display:block; text-align:center; padding:22px 16px 18px; background:var(--cream);
   }
-  .hero-cta-mobile .btn{
-    width:100%; max-width:440px; justify-content:center; text-align:center;
-    white-space:normal; font-size:1.02rem; line-height:1.35; padding:14px 18px;
-  }
-  .hero-cta-mobile .btn .ico{ flex:0 0 auto; }
+  .hero-cta-mobile .btn{ font-size:1rem; padding:13px 26px; }
 }
 
 /* ===================================================================

@@ -19,10 +19,9 @@
 
   const NAV = [
     { key: 'about',   zh: '關於我們', en: 'ABOUT',   href: 'pages/about.html' },
-    { key: 'rules',   zh: '賽事辦法', en: 'RULES',   href: 'pages/rules.html' },
+    { key: 'rules',   zh: '賽事規則', en: 'RULES',   href: 'pages/rules.html' },
     { key: 'news',    zh: '最新消息', en: 'NEWS',    href: 'pages/news.html' },
     { key: 'gallery', zh: '賽事相簿', en: 'GALLERY', href: 'pages/gallery.html' },
-    { key: 'rules2',  zh: '賽事規則', en: 'RULES',   href: 'pages/rules.html' },
     { key: 'contact', zh: '聯絡我們', en: 'CONTACT', href: 'pages/contact.html' }
   ];
 
